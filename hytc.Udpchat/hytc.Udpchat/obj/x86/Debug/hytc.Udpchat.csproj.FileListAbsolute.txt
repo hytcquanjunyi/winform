@@ -1,0 +1,7 @@
+F:\hytc.Udpchat\hytc.Udpchat\bin\Debug\hytc.Udpchat.exe
+F:\hytc.Udpchat\hytc.Udpchat\bin\Debug\hytc.Udpchat.pdb
+F:\hytc.Udpchat\hytc.Udpchat\obj\x86\Debug\hytc.Udpchat.Form1.resources
+F:\hytc.Udpchat\hytc.Udpchat\obj\x86\Debug\hytc.Udpchat.Properties.Resources.resources
+F:\hytc.Udpchat\hytc.Udpchat\obj\x86\Debug\hytc.Udpchat.csproj.GenerateResource.Cache
+F:\hytc.Udpchat\hytc.Udpchat\obj\x86\Debug\hytc.Udpchat.exe
+F:\hytc.Udpchat\hytc.Udpchat\obj\x86\Debug\hytc.Udpchat.pdb

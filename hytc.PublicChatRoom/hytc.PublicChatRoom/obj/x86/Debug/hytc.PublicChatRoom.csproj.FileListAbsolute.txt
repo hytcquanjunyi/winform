@@ -1,0 +1,7 @@
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\bin\Debug\hytc.PublicChatRoom.exe
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\bin\Debug\hytc.PublicChatRoom.pdb
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\obj\x86\Debug\hytc.PublicChatRoom.Form1.resources
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\obj\x86\Debug\hytc.PublicChatRoom.Properties.Resources.resources
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\obj\x86\Debug\hytc.PublicChatRoom.csproj.GenerateResource.Cache
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\obj\x86\Debug\hytc.PublicChatRoom.exe
+F:\hytc.PublicChatRoom\hytc.PublicChatRoom\obj\x86\Debug\hytc.PublicChatRoom.pdb

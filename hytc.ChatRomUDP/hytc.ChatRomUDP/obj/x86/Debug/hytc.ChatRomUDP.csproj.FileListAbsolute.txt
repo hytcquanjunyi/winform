@@ -1,0 +1,8 @@
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.Properties.Resources.resources
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.csproj.GenerateResource.Cache
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.UCFriendUnit.resources
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\bin\Debug\hytc.ChatRomUDP.exe
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\bin\Debug\hytc.ChatRomUDP.pdb
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.mainForm.resources
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.exe
+F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.pdb
