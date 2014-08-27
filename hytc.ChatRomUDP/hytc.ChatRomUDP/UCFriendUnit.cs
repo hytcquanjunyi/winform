@@ -35,6 +35,7 @@ namespace hytc.ChatRomUDP
         {
             InitializeComponent();
         }
+     
 
         private void UCFriendUnit_Load(object sender, EventArgs e)
         {

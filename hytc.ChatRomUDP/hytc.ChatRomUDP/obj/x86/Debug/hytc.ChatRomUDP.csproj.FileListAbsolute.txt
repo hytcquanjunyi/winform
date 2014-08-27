@@ -6,3 +6,12 @@ F:\hytc.ChatRomUDP\hytc.ChatRomUDP\bin\Debug\hytc.ChatRomUDP.pdb
 F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.mainForm.resources
 F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.exe
 F:\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.pdb
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.exe
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.pdb
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\bin\Debug\hytc.ChatRomUDP.exe
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\bin\Debug\hytc.ChatRomUDP.pdb
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.mainForm.resources
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.Properties.Resources.resources
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.UCFriendUnit.resources
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.csproj.GenerateResource.Cache
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.talkFrm.resources

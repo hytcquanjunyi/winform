@@ -13,5 +13,7 @@ namespace hytc.ChatRomUDP
         public string ShouShou { get;set;}
         public IPAddress IP { get; set;}
         public bool IsOpen { get; set;}
+
+        public string Message { get; set; }
     }
 }
