@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 
 namespace hytc.ChatRomUDP
 {
@@ -30,6 +31,10 @@ namespace hytc.ChatRomUDP
         private void talkFrm_Load(object sender, EventArgs e)
         {
             this.Text = "与" + curFriend.NikNme + "聊天中";
+            Thread mythread = new Thread(recieve);
+            mythread.IsBackground = true;
+            mythread.Start();
+           
         }
 
         private void btnsend_Click(object sender, EventArgs e)
@@ -44,6 +49,19 @@ namespace hytc.ChatRomUDP
 
             client.Send(msgbyte,msgbyte.Length,iept);
 
+        }
+
+        private void recieve() 
+        {
+            while (true) 
+            {
+                while(Net.flag==true)
+                {
+                    this.talkhistroy.Text = curFriend.Message;
+
+                    Net.flag = false;
+                }
+            }
         }
 
         private void talkFrm_FormClosing(object sender, FormClosingEventArgs e)

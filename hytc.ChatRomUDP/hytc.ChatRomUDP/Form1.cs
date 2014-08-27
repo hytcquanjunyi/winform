@@ -19,17 +19,41 @@ namespace hytc.ChatRomUDP
             InitializeComponent();
         }
 
+       public string mynickName;
 
-       
+       public int myheadimage;
 
-        private void mainForm_Load(object sender, EventArgs e)
-        {
-             
-            Thread mythread = new Thread(receiver);
+       public List<Friend> list = new List<Friend>();
+
+       private void mainForm_Load(object sender, EventArgs e)
+       {
+            Operation op = new Operation(this);
+
+            IPAddress myIP=op.getMyIP();
+
+            Thread mythread = new Thread(op.receiver);
 
             mythread.IsBackground = true;
 
             mythread.Start();
+
+            Thread.Sleep(100);
+
+            UdpClient client = new UdpClient();
+
+            IPEndPoint ipet = new IPEndPoint(IPAddress.Parse("255.255.255.255"), 9527);
+
+            this.txtNickName.Text = myIP.ToString(); ;
+
+            mynickName = this.txtNickName.Text;
+
+            string msgstring = "LOGIN|" + this.txtNickName.Text + "|0|说薯片";
+
+            this.picHeadImage.Image = this.imageList1.Images[0];
+
+            byte[] msgbyte = Encoding.Default.GetBytes(msgstring);
+
+            client.Send(msgbyte, msgbyte.Length, ipet);
            
         }
 
@@ -41,8 +65,12 @@ namespace hytc.ChatRomUDP
             UdpClient client = new UdpClient();
             
             IPEndPoint ipet = new IPEndPoint(IPAddress.Parse("255.255.255.255"), 9527);
+
+            this.txtNickName.Text = System.Environment.MachineName;
+
+            mynickName = this.txtNickName.Text;
             
-            string msgstring = "lOGIN|" + this.txtNickName.Text + "|0|说薯片";
+            string msgstring = "LOGIN|" + this.txtNickName.Text + "|0|说薯片";
 
              this.picHeadImage.Image=this.imageList1.Images[0];
             
@@ -53,58 +81,9 @@ namespace hytc.ChatRomUDP
         }
 
 
-        private void receiver()
-        {
-            UdpClient client = new UdpClient(9527);
-
-            while (true)
-            {
-                IPEndPoint iept = new IPEndPoint(IPAddress.Any, 0);
-
-                byte[] msgbyte = client.Receive(ref iept);
-
-                string msgstring = Encoding.Default.GetString(msgbyte);
-
-                string[] split = msgstring.Split('|');
-                Friend fr = new Friend();
-
-                if (split[0] == "lOGIN")
-                {
-                    
-                    UCFriendUnit ucfriend = new UCFriendUnit();
-
-
-                    fr.NikNme = split[1];
-
-                    fr.ShouShou = split[3];
-                    fr.PicIndex =Convert.ToInt32(split[2]);
-                    fr.IP = iept.Address;
-
-                    object[] pars=new object[1];
-
-                    pars[0]=fr;
-
-                    this.Invoke(new delegateAdd(this.addUCFriendUnit),pars );
-                }
-                if (split[0]=="mSG")
-                {
-                    fr.Message = msgstring;
-                    
-                }
-
-
-                if (split[0] == "lOGOUT") 
-                {
-                   
-                    object[] pars = new object[1];
-                    pars[0] = fr;
-                    this.Invoke(new delegateRemove(this.removeUCFriendUnit), pars);
-                }
-            }
-
-        }
-        public delegate void delegateAdd(Friend fr);
-        private void addUCFriendUnit(Friend fr) 
+       
+       
+        public void addUCFriendUnit(Friend fr) 
         {
             
             UCFriendUnit ucfriend = new UCFriendUnit();
@@ -137,9 +116,9 @@ namespace hytc.ChatRomUDP
            
         }
 
-        public delegate void delegateRemove(Friend fr);
+       
 
-        private void removeUCFriendUnit(Friend fr) 
+        public void removeUCFriendUnit(Friend fr) 
         {
             UCFriendUnit ucfriend = new UCFriendUnit();
             
@@ -159,6 +138,11 @@ namespace hytc.ChatRomUDP
             byte[] msgbyte = Encoding.Default.GetBytes(msgstring);
 
             client.Send(msgbyte, msgbyte.Length, ipet);
+        }
+
+        private void txtNickName_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

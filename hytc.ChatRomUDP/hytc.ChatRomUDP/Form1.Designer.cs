@@ -92,6 +92,7 @@
             this.txtNickName.Name = "txtNickName";
             this.txtNickName.Size = new System.Drawing.Size(100, 21);
             this.txtNickName.TabIndex = 5;
+            this.txtNickName.TextChanged += new System.EventHandler(this.txtNickName_TextChanged);
             // 
             // imageList1
             // 
