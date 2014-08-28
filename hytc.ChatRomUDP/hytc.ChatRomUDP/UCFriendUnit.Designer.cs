@@ -44,6 +44,7 @@
             this.picHeadImge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHeadImge.TabIndex = 0;
             this.picHeadImge.TabStop = false;
+            this.picHeadImge.DoubleClick += new System.EventHandler(this.picHeadImge_DoubleClick);
             // 
             // lblNickName
             // 
@@ -53,6 +54,7 @@
             this.lblNickName.Size = new System.Drawing.Size(41, 12);
             this.lblNickName.TabIndex = 1;
             this.lblNickName.Text = "label1";
+            this.lblNickName.DoubleClick += new System.EventHandler(this.lblNickName_DoubleClick);
             // 
             // lblshoushou
             // 
@@ -62,6 +64,7 @@
             this.lblshoushou.Size = new System.Drawing.Size(41, 12);
             this.lblshoushou.TabIndex = 2;
             this.lblshoushou.Text = "label2";
+            this.lblshoushou.DoubleClick += new System.EventHandler(this.lblshoushou_DoubleClick);
             // 
             // UCFriendUnit
             // 
@@ -74,6 +77,7 @@
             this.Name = "UCFriendUnit";
             this.Size = new System.Drawing.Size(176, 42);
             this.Load += new System.EventHandler(this.UCFriendUnit_Load);
+            this.DoubleClick += new System.EventHandler(this.UCFriendUnit_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.picHeadImge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

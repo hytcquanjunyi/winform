@@ -27,6 +27,8 @@ namespace hytc.ChatRomUDP
 
        private void mainForm_Load(object sender, EventArgs e)
        {
+            mainForm.CheckForIllegalCrossThreadCalls = false;
+
             Operation op = new Operation(this);
 
             IPAddress myIP=op.getMyIP();
@@ -89,19 +91,30 @@ namespace hytc.ChatRomUDP
             UCFriendUnit ucfriend = new UCFriendUnit();
 
             ucfriend.Mainfrm = this;
-         
-            ucfriend.DoubleClick += new EventHandler(ucfriend_DoubleClick);
+            
+            ucfriend.mydbclik+=new EventHandler(ucfriend_mydbclik);
+            //ucfriend.DoubleClick += new EventHandler(ucfriend_DoubleClick);
 
             ucfriend.CurFriend = fr;
 
             ucfriend.Top = panelFriendList.Controls.Count * ucfriend.Height;
 
             panelFriendList.Controls.Add(ucfriend);
-
+          
            
         }
-        
-        
+
+        void ucfriend_mydbclik(object sender, EventArgs e) 
+        {
+            UCFriendUnit ucf = (UCFriendUnit)sender;
+
+            if (ucf.CurFriend.IsOpen != true)
+            {
+                talkFrm talk = new talkFrm(ucf.CurFriend);
+                ucf.CurFriend.IsOpen = true;
+                talk.Show();
+            }
+        }
 
         void ucfriend_DoubleClick(object sender, EventArgs e)
         {
@@ -116,8 +129,8 @@ namespace hytc.ChatRomUDP
            
         }
 
-       
-
+        
+        
         public void removeUCFriendUnit(Friend fr) 
         {
             UCFriendUnit ucfriend = new UCFriendUnit();
@@ -127,23 +140,25 @@ namespace hytc.ChatRomUDP
             panelFriendList.Controls.Remove(ucfriend);
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e)
+        public Panel getPanel() 
+        {
+            return this.panelFriendList;
+        }
+
+        private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             UdpClient client = new UdpClient();
 
             IPEndPoint ipet = new IPEndPoint(IPAddress.Parse("255.255.255.255"), 9527);
 
-            string msgstring = "lOGOUT|" + this.txtNickName.Text;
+            string msgstring = "LOGOUT";
 
             byte[] msgbyte = Encoding.Default.GetBytes(msgstring);
 
             client.Send(msgbyte, msgbyte.Length, ipet);
         }
 
-        private void txtNickName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
     }
 }

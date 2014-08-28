@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net.Sockets;
 using System.Net;
+using System.Windows.Forms;
 
 
 namespace hytc.ChatRomUDP
@@ -34,6 +35,8 @@ namespace hytc.ChatRomUDP
          }
         public delegate void delegateAdd(Friend fr);
         public delegate void delegateRemove(Friend fr);
+        public delegate void deleremove(Friend fr);
+
         public void receiver()
         {
             UdpClient client = new UdpClient(9527);
@@ -89,6 +92,24 @@ namespace hytc.ChatRomUDP
                         object[] parss = new object[1];
                         parss[0] = fr;
                         _mf.Invoke(new delegateAdd(_mf. addUCFriendUnit), parss);
+                            break;
+                    case "LOGOUT":
+                        Panel panelist = _mf.getPanel();
+                        int deleteindex=0;
+                        foreach (UCFriendUnit ltucfunit in panelist.Controls) 
+                        {
+                            if (iept.Address.ToString()==ltucfunit.CurFriend.IP.ToString())
+                            {
+                                panelist.Controls.Remove(ltucfunit);
+                                break;
+                            }
+                            deleteindex++;
+                        }
+                        for (int i = deleteindex; i < panelist.Controls.Count; i++)
+                        {
+                            panelist.Controls[i].Top = i * panelist.Controls[0].Height;
+                        }
+         
                             break;
                     default: 
                             break;

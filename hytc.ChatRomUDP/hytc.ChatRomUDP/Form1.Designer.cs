@@ -30,26 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            this.btnlogin = new System.Windows.Forms.Button();
             this.panelFriendList = new System.Windows.Forms.Panel();
             this.picHeadImage = new System.Windows.Forms.PictureBox();
             this.lblNickName = new System.Windows.Forms.Label();
             this.lblshoushou = new System.Windows.Forms.Label();
             this.txtNickName = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHeadImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnlogin
-            // 
-            this.btnlogin.Location = new System.Drawing.Point(142, 67);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(53, 23);
-            this.btnlogin.TabIndex = 0;
-            this.btnlogin.Text = "登录";
-            this.btnlogin.UseVisualStyleBackColor = true;
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // panelFriendList
             // 
@@ -92,7 +80,6 @@
             this.txtNickName.Name = "txtNickName";
             this.txtNickName.Size = new System.Drawing.Size(100, 21);
             this.txtNickName.TabIndex = 5;
-            this.txtNickName.TextChanged += new System.EventHandler(this.txtNickName_TextChanged);
             // 
             // imageList1
             // 
@@ -203,30 +190,19 @@
             this.imageList1.Images.SetKeyName(102, "Zilean_Square_0.png");
             this.imageList1.Images.SetKeyName(103, "Zyra_Square_0.png");
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Location = new System.Drawing.Point(201, 67);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(57, 23);
-            this.btnLogOut.TabIndex = 6;
-            this.btnLogOut.Text = "登出";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(270, 454);
-            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.txtNickName);
             this.Controls.Add(this.lblshoushou);
             this.Controls.Add(this.lblNickName);
             this.Controls.Add(this.picHeadImage);
             this.Controls.Add(this.panelFriendList);
-            this.Controls.Add(this.btnlogin);
             this.Name = "mainForm";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainForm_FormClosed);
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picHeadImage)).EndInit();
             this.ResumeLayout(false);
@@ -236,14 +212,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Panel panelFriendList;
         private System.Windows.Forms.PictureBox picHeadImage;
         private System.Windows.Forms.Label lblNickName;
         private System.Windows.Forms.Label lblshoushou;
         private System.Windows.Forms.TextBox txtNickName;
         public System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btnLogOut;
     }
 }
 

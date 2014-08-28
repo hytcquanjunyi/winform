@@ -15,3 +15,4 @@ E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.Propert
 E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.UCFriendUnit.resources
 E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.csproj.GenerateResource.Cache
 E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.talkFrm.resources
+E:\winform\hytc.ChatRomUDP\hytc.ChatRomUDP\obj\x86\Debug\hytc.ChatRomUDP.csprojResolveAssemblyReference.cache

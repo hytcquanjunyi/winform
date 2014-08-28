@@ -35,11 +35,33 @@ namespace hytc.ChatRomUDP
         {
             InitializeComponent();
         }
-     
+        public event EventHandler mydbclik;
+        
+
 
         private void UCFriendUnit_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void picHeadImge_DoubleClick(object sender, EventArgs e)
+        {
+            mydbclik(this,e);
+        }
+
+        private void lblNickName_DoubleClick(object sender, EventArgs e)
+        {
+            mydbclik(this, e);
+        }
+
+        private void lblshoushou_DoubleClick(object sender, EventArgs e)
+        {
+            mydbclik(this, e);
+        }
+
+        private void UCFriendUnit_DoubleClick(object sender, EventArgs e)
+        {
+            mydbclik(this, e);
         }
     }
 }
